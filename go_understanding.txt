@@ -1,0 +1,16 @@
+#DEFINE
+: <> meaning without additonal syntax
+
+#SETUP / LINKED
+: go mod init [module-path]			//typically the repo path or just name
+--? sets up the module to enable dependency tracking
+--? dependency tracking is for managing imports of external modules
+--? mod file format??
+--? recall go mod (tidy) to add new added dependency
+
+#GENERAL NOTES
+create packages to store functions : package <name> 
+import standard library functions  : import "name" // "fmt" 
+
+
+#pointer and allocation differences from c
