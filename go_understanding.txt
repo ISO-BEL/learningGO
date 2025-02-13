@@ -1,5 +1,10 @@
-#DEFINE
+#NOTES
 : <> meaning without additonal syntax
+
+#DEFINE
+: package collects all file(functions) in the current directory as apart of the package
+: cast operation type(a) (casts between diffent types require explicit conversion)
+
 
 #SETUP / LINKED
 : go mod init [module-path]			//typically the repo path or just name
@@ -7,10 +12,65 @@
 --? dependency tracking is for managing imports of external modules
 --? mod file format??
 --? recall go mod (tidy) to add new added dependency
+: go function names with a Capitial (as first letter) can be called in a function
+: not in the same package (exported name) (otherwise the functions are specific to
+: the package (scoped)
+
 
 #GENERAL NOTES
 create packages to store functions : package <name> 
 import standard library functions  : import "name" // "fmt" 
+empty return; returns the named return values
+wierd declaration : var i, j int = 1, 2
+				  : var i int
+				  : var name string
+				  : var name, leader = "bill", "joe"
+				  : name := "a name"
+				  : num := 2
+---?go
+If an initializer is present, the type can be omitted; the variable will take the type of the initializer.
+---?go
+uninit variables are given there 0-value
+""    - empty string
+false - bool 0
+0	  - num
 
 
 #pointer and allocation differences from c
+
+
+
+
+#block declarations
+import (
+	"fmt"
+	"math/cmplx"
+)
+
+var (
+	ToBe   bool       = false
+	MaxInt uint64     = 1<<64 - 1
+	z      complex128 = cmplx.Sqrt(-5 + 12i)
+)
+
+#types (alias / word size changes)
+string
+bool
+
+int		(matches machine 32 or 64)
+int8	
+int16
+int32	(rune)
+int64
+
+uint	(matches machine 32 or 64)
+uint8	(byte)
+uint16
+uint32	
+uint64
+uintptr (matches machine 32 or 64)
+
+float32
+float64
+complex64
+complex128
