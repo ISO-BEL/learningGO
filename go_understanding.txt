@@ -4,6 +4,10 @@
 #DEFINE
 : package collects all file(functions) in the current directory as apart of the package
 : cast operation type(a) (casts between diffent types require explicit conversion)
+	-- with pointers you still have to write (*type) 
+: modules set with a url get there prefix shortend for packages and functions to the 
+	-- last item in the link ../../../man  --so that the external functions follow
+	-- the format man.C		prefix then capital letter
 
 
 #SETUP / LINKED

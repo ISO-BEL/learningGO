@@ -1,0 +1,9 @@
+#basics of from c to go (in Cgo)
+
+above the import "C" statement
+//
+// called preamble
+import "C"
+
+basics of from go to c
+

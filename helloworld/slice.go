@@ -1,4 +1,4 @@
-package main
+package	main 
 import "fmt"
 //slices are like array references
 //go refers to array literals as slice literals
